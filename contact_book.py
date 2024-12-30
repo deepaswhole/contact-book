@@ -14,3 +14,14 @@ def add_contact(name, phone, email):
     contacts.append({"name": name, "phone": phone, "email": email})
     print(f"Contact {name} added successfully!")
 
+
+def search_contact(name):
+    found = [contact for contact in contacts if contact['name'].lower() == name.lower()]
+    if found:
+        for contact in found:
+            print(f"Name: {contact['name']}, Phone: {contact['phone']}, Email: {contact['email']}")
+    else:
+        print("No contact found with that name!")
+
+
+
