@@ -24,4 +24,9 @@ def search_contact(name):
         print("No contact found with that name!")
 
 
+def delete_contact(name):
+    global contacts
+    contacts = [contact for contact in contacts if contact['name'].lower() != name.lower()]
+    print(f"Contact {name} deleted (if it existed).")
+
 
